@@ -1,0 +1,22 @@
+import * as GetListIndex from '../GetListIndex/GetListIndex.ts'
+import type { List } from '../List/List.ts'
+import * as SelectIndex from '../SelectIndex/SelectIndex.ts'
+
+export const handleClickAt = <T, State extends List<T>>(
+  state: State,
+  eventX: number,
+  eventY: number,
+): Promise<State> => {
+  const { x, y, itemHeight, deltaY, items } = state
+  const index = GetListIndex.getListIndex(
+    eventX,
+    eventY,
+    x,
+    y,
+    deltaY,
+    itemHeight,
+    0,
+    items.length,
+  )
+  return SelectIndex.selectIndex(state, index)
+}
