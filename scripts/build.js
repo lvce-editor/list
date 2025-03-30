@@ -2,6 +2,7 @@ import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path, { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { execa } from 'execa'
+import { generateApiTypes } from './generateApiTypes.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
@@ -82,3 +83,5 @@ await writeJson(join(dist, 'package.json'), packageJson)
 
 await cp(join(root, 'README.md'), join(dist, 'README.md'))
 await cp(join(root, 'LICENSE'), join(dist, 'LICENSE'))
+
+await generateApiTypes()
