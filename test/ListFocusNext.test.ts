@@ -1,7 +1,7 @@
 import { expect, test } from '@jest/globals'
 import type { List } from '../src/parts/List/List.ts'
-import * as ListFocusNext from '../src/parts/ListFocusNext/ListFocusNext.ts'
 import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
+import * as ListFocusNext from '../src/parts/ListFocusNext/ListFocusNext.ts'
 
 test('focusNext updates focusedIndex to the next index', () => {
   const initialItems = ['item1', 'item2', 'item3']

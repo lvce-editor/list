@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals'
-import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import type { List } from '../src/parts/List/List.ts'
+import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import { focusNextPage } from '../src/parts/ListFocusNextPage/ListFocusNextPage.ts'
 
 test('focusNextPage - returns same state when at last index', () => {

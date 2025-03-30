@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals'
-import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import type { List } from '../src/parts/List/List.ts'
+import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import * as ListFocusPrevious from '../src/parts/ListFocusPrevious/ListFocusPrevious.ts'
 
 test('focusPrevious - returns same state when focusedIndex is 0', () => {
