@@ -57,7 +57,7 @@ export const generateApiTypes = async () => {
   )
   await execa(
     bundleGeneratorPath,
-    ['-o', 'dist/dist/api.d.ts', 'src/parts/index.ts'],
+    ['-o', 'dist/dist/api.d.ts', 'src/index.ts'],
     {
       cwd: root,
       reject: false,
