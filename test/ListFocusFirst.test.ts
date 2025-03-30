@@ -12,6 +12,13 @@ test('focusFirst', () => {
     itemHeight: 20,
     maxLineY: 10,
     minLineY: 0,
+    deltaY: 0,
+    finalDeltaY: 0,
+    handleOffset: 0,
+    scrollBarActive: false,
+    scrollBarHeight: 0,
+    x: 0,
+    y: 0,
   }
   const result = ListFocusFirst.focusFirst(initialState)
   expect(result.focusedIndex).toBe(-1)

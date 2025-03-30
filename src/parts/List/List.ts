@@ -12,4 +12,5 @@ export interface List<T> {
   readonly scrollBarHeight: number
   readonly handleOffset: number
   readonly x: number
+  readonly scrollBarActive: boolean
 }

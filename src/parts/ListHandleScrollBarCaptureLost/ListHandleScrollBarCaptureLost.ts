@@ -1,6 +1,8 @@
-import type { SearchState } from '../SearchState/SearchState.ts'
+import type { List } from '../List/List.ts'
 
-export const handleScrollBarCaptureLost = (state: SearchState): SearchState => {
+export const handleScrollBarCaptureLost = <T, State extends List<T>>(
+  state: State,
+): State => {
   return {
     ...state,
     scrollBarActive: false,
