@@ -1,7 +1,7 @@
 import { expect, test } from '@jest/globals'
 import type { List } from '../src/parts/List/List.ts'
-import { focusPreviousPage } from '../src/parts/ListFocusPreviousPage/ListFocusPreviousPage.ts'
 import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
+import { focusPreviousPage } from '../src/parts/ListFocusPreviousPage/ListFocusPreviousPage.ts'
 
 test('focusPreviousPage - returns same state when at first index', () => {
   const state: List<string> = {

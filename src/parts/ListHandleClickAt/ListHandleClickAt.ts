@@ -1,5 +1,5 @@
-import * as GetListIndex from '../GetListIndex/GetListIndex.ts'
 import type { List } from '../List/List.ts'
+import * as GetListIndex from '../GetListIndex/GetListIndex.ts'
 import * as SelectIndex from '../SelectIndex/SelectIndex.ts'
 
 export const handleClickAt = <T, State extends List<T>>(

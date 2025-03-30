@@ -1,7 +1,7 @@
+import type { List } from '../List/List.ts'
 import * as Assert from '../Assert/Assert.ts'
 import * as Clamp from '../Clamp/Clamp.ts'
 import * as GetNumberOfVisibleItems from '../GetNumberOfVisibleItems/GetNumberOfVisibleItems.ts'
-import type { List } from '../List/List.ts'
 
 export const setDeltaY = <T, State extends List<T>>(
   state: State,

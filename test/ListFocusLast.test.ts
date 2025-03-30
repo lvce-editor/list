@@ -1,7 +1,7 @@
 import { expect, test } from '@jest/globals'
 import type { List } from '../src/parts/List/List.ts'
-import { focusLast } from '../src/parts/ListFocusLast/ListFocusLast.ts'
 import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
+import { focusLast } from '../src/parts/ListFocusLast/ListFocusLast.ts'
 
 test('focusLast', () => {
   const initialItems: readonly string[] = []
