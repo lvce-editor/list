@@ -1,3 +1,4 @@
+export * from '../GetNumberOfVisibleItems/GetNumberOfVisibleItems.ts'
 export type * from '../List/List.ts'
 export * from '../ListFocusFirst/ListFocusFirst.ts'
 export * from '../ListFocusIndex/ListFocusIndex.ts'
@@ -13,3 +14,4 @@ export * from '../ListHandleScrollBarCaptureLost/ListHandleScrollBarCaptureLost.
 export * from '../ListHandleScrollBarClick/ListHandleScrollBarClick.ts'
 export * from '../ListHandleScrollBarMove/ListHandleScrollBarMove.ts'
 export * from '../ListHandleWheel/ListHandleWheel.ts'
+export * from '../ScrollBarFunctions/ScrollBarFunctions.ts'
