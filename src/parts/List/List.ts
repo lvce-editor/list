@@ -8,6 +8,7 @@ export interface List<T> {
   readonly itemHeight: number
   readonly items: readonly T[]
   readonly maxLineY: number
+  readonly minimumSliderSize: number
   readonly minLineY: number
   readonly scrollBarActive: boolean
   readonly scrollBarHeight: number
