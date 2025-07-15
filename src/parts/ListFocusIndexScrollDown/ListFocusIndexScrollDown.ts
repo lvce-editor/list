@@ -9,7 +9,7 @@ export const focusIndexScrollDown = <T, State extends List<T>>(
   itemHeight: number,
   itemsLength: number,
 ): State => {
-  const { deltaY, finalDeltaY, height, headerHeight, scrollBarHeight } = state
+  const { finalDeltaY, height, headerHeight, scrollBarHeight } = state
   const newMaxLineY = Math.min(index + 1, itemsLength)
   const fittingItems = GetNumberOfVisibleItems.getNumberOfVisibleItems(
     listHeight,
