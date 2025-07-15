@@ -1,18 +1,31 @@
-export const getScrollBarSize = (size: number, contentSize: number, minimumSliderSize: number): number => {
+export const getScrollBarSize = (
+  size: number,
+  contentSize: number,
+  minimumSliderSize: number,
+): number => {
   if (size >= contentSize) {
     return 0
   }
   return Math.max(Math.round(size ** 2 / contentSize), minimumSliderSize)
 }
 
-const getScrollBarOffset = (delta: number, finalDelta: number, size: number, scrollBarSize: number): number => {
+const getScrollBarOffset = (
+  delta: number,
+  finalDelta: number,
+  size: number,
+  scrollBarSize: number,
+): number => {
   const scrollBarOffset = (delta / finalDelta) * (size - scrollBarSize)
   return scrollBarOffset
 }
 
 export const getScrollBarY = getScrollBarOffset
 
-export const getNewDeltaPercent = (height: number, scrollBarHeight: number, relativeY: number): any => {
+export const getNewDeltaPercent = (
+  height: number,
+  scrollBarHeight: number,
+  relativeY: number,
+): any => {
   const halfScrollBarHeight = scrollBarHeight / 2
   if (relativeY <= halfScrollBarHeight) {
     // clicked at top

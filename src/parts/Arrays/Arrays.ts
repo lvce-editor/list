@@ -8,6 +8,10 @@ export const lastIndex = <T>(array: readonly T[]): number => {
   return array.length - 1
 }
 
-export const remove = <T>(array: readonly T[], index: number, deleteCount: number): readonly T[] => {
+export const remove = <T>(
+  array: readonly T[],
+  index: number,
+  deleteCount: number,
+): readonly T[] => {
   return array.toSpliced(index, deleteCount)
 }
