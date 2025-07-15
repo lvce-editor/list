@@ -18,6 +18,7 @@ export const createDefaultState = (): List<string> => {
     x: 0,
     y: 0,
     scrollBarY: 0,
+    minimumSliderSize: 20,
   }
   return initialState
 }
