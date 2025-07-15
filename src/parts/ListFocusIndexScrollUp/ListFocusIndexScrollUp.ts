@@ -9,7 +9,10 @@ export const focusIndexScrollUp = <T, State extends List<T>>(
   itemsLength: number,
 ): State => {
   const newMinLineY = index
-  const fittingItems = GetNumberOfVisibleItems.getNumberOfVisibleItems(listHeight, itemHeight)
+  const fittingItems = GetNumberOfVisibleItems.getNumberOfVisibleItems(
+    listHeight,
+    itemHeight,
+  )
   const newMaxLineY = Math.min(newMinLineY + fittingItems, itemsLength)
   const newDeltaY = newMinLineY * itemHeight
   return {
