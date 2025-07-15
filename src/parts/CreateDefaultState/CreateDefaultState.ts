@@ -17,6 +17,7 @@ export const createDefaultState = (): List<string> => {
     scrollBarHeight: 0,
     x: 0,
     y: 0,
+    scrollBarY: 0,
   }
   return initialState
 }

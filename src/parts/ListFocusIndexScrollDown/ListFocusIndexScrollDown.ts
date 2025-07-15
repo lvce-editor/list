@@ -1,5 +1,6 @@
 import type { List } from '../List/List.ts'
 import * as GetNumberOfVisibleItems from '../GetNumberOfVisibleItems/GetNumberOfVisibleItems.ts'
+import { getScrollBarY } from '../ScrollBarFunctions/ScrollBarFunctions.ts'
 
 export const focusIndexScrollDown = <T, State extends List<T>>(
   state: State,
@@ -8,6 +9,7 @@ export const focusIndexScrollDown = <T, State extends List<T>>(
   itemHeight: number,
   itemsLength: number,
 ): State => {
+  const { finalDeltaY, height, headerHeight, scrollBarHeight } = state
   const newMaxLineY = Math.min(index + 1, itemsLength)
   const fittingItems = GetNumberOfVisibleItems.getNumberOfVisibleItems(
     listHeight,
@@ -18,6 +20,12 @@ export const focusIndexScrollDown = <T, State extends List<T>>(
     itemsLength < fittingItems
       ? 0
       : newMinLineY * itemHeight - (listHeight % itemHeight) + itemHeight
+  const scrollBarY = getScrollBarY(
+    newDeltaY,
+    finalDeltaY,
+    height - headerHeight,
+    scrollBarHeight,
+  )
   return {
     ...state,
     focusedIndex: index,
@@ -25,5 +33,6 @@ export const focusIndexScrollDown = <T, State extends List<T>>(
     maxLineY: newMaxLineY,
     focused: true,
     deltaY: newDeltaY,
+    scrollBarY,
   }
 }

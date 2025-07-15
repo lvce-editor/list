@@ -11,6 +11,7 @@ export interface List<T> {
   readonly minLineY: number
   readonly scrollBarActive: boolean
   readonly scrollBarHeight: number
+  readonly scrollBarY: number
   readonly x: number
   readonly y: number
 }
