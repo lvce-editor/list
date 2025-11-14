@@ -17,6 +17,7 @@ export const focusIndex = <T, State extends List<T>>(
     return {
       ...state,
       focusedIndex: -1,
+      listFocusedIndex: -1,
       focused: true,
     }
   }
@@ -42,6 +43,7 @@ export const focusIndex = <T, State extends List<T>>(
   return {
     ...state,
     focusedIndex: index,
+    listFocusedIndex: index,
     focused: true,
   }
 }
