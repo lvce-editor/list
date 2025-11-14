@@ -29,6 +29,7 @@ export const focusIndexScrollDown = <T, State extends List<T>>(
   return {
     ...state,
     focusedIndex: index,
+    listFocusedIndex: index,
     minLineY: newMinLineY,
     maxLineY: newMaxLineY,
     focused: true,
