@@ -8,10 +8,10 @@ test('focusNext updates focusedIndex to the next index', () => {
   const initialState: List<string> = {
     ...createDefaultState(),
     focusedIndex: 0,
-    items: initialItems,
     headerHeight: 0,
     height: 100,
     itemHeight: 20,
+    items: initialItems,
     maxLineY: 10,
     minLineY: 0,
   }

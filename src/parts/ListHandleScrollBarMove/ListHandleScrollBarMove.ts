@@ -19,12 +19,12 @@ export const handleScrollBarMove = <T, State extends List<T>>(
   eventY: number,
 ): State => {
   const {
-    y,
-    headerHeight,
-    handleOffset,
     finalDeltaY,
+    handleOffset,
+    headerHeight,
     height,
     scrollBarHeight,
+    y,
   } = state
   const relativeY = eventY - y - headerHeight - handleOffset
   const contentHeight = height - headerHeight

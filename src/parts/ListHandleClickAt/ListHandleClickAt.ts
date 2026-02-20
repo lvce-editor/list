@@ -7,7 +7,7 @@ export const handleClickAt = <T, State extends List<T>>(
   eventX: number,
   eventY: number,
 ): Promise<State> => {
-  const { x, y, itemHeight, deltaY, items } = state
+  const { deltaY, itemHeight, items, x, y } = state
   const index = GetListIndex.getListIndex(
     eventX,
     eventY,

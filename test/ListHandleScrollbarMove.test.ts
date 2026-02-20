@@ -7,10 +7,10 @@ test('handleScrollbarMove - move scrollbar', () => {
   const state: List<string> = {
     ...createDefaultState(),
     deltaY: 0,
-    itemHeight: 20,
     finalDeltaY: 200,
-    height: 500,
     headerHeight: 40,
+    height: 500,
+    itemHeight: 20,
   }
 
   const result = ListHandleScrollBarMove.handleScrollBarMove(state, 100)
@@ -22,10 +22,10 @@ test('handleScrollBarMove - clamps at upper bound', () => {
   const state: List<string> = {
     ...createDefaultState(),
     deltaY: 0,
-    itemHeight: 20,
     finalDeltaY: 200,
-    height: 500,
     headerHeight: 40,
+    height: 500,
+    itemHeight: 20,
   }
 
   const result = ListHandleScrollBarMove.handleScrollBarMove(state, 250)
@@ -36,10 +36,10 @@ test('handleScrollBarMove - clamps at lower bound', () => {
   const state: List<string> = {
     ...createDefaultState(),
     deltaY: 100,
-    itemHeight: 20,
     finalDeltaY: 200,
-    height: 500,
     headerHeight: 40,
+    height: 500,
+    itemHeight: 20,
   }
 
   const result = ListHandleScrollBarMove.handleScrollBarMove(state, -50)

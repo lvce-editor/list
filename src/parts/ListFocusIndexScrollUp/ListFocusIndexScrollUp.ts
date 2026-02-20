@@ -9,7 +9,7 @@ export const focusIndexScrollUp = <T, State extends List<T>>(
   itemHeight: number,
   itemsLength: number,
 ): State => {
-  const { finalDeltaY, height, headerHeight, scrollBarHeight } = state
+  const { finalDeltaY, headerHeight, height, scrollBarHeight } = state
   const newMinLineY = index
   const fittingItems = GetNumberOfVisibleItems.getNumberOfVisibleItems(
     listHeight,
@@ -25,12 +25,12 @@ export const focusIndexScrollUp = <T, State extends List<T>>(
   )
   return {
     ...state,
+    deltaY: newDeltaY,
+    focused: true,
     focusedIndex: index,
     listFocusedIndex: index,
-    minLineY: newMinLineY,
     maxLineY: newMaxLineY,
-    focused: true,
-    deltaY: newDeltaY,
+    minLineY: newMinLineY,
     scrollBarY,
   }
 }
