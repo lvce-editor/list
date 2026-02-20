@@ -6,7 +6,7 @@ export const handleScrollBarClick = <T, State extends List<T>>(
   state: State,
   eventY: number,
 ): State => {
-  const { y, deltaY, headerHeight, finalDeltaY, scrollBarHeight, height } =
+  const { deltaY, finalDeltaY, headerHeight, height, scrollBarHeight, y } =
     state
   const contentHeight = height - headerHeight
   const relativeY = eventY - y - headerHeight
@@ -24,7 +24,7 @@ export const handleScrollBarClick = <T, State extends List<T>>(
       scrollBarActive: true,
     }
   }
-  const { percent, handleOffset } = ScrollBarFunctions.getNewDeltaPercent(
+  const { handleOffset, percent } = ScrollBarFunctions.getNewDeltaPercent(
     contentHeight,
     scrollBarHeight,
     relativeY,

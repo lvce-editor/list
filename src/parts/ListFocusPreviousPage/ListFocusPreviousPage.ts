@@ -4,7 +4,7 @@ import { focusIndex } from '../ListFocusIndex/ListFocusIndex.ts'
 export const focusPreviousPage = <T, State extends List<T>>(
   state: State,
 ): State => {
-  const { focusedIndex, minLineY, maxLineY } = state
+  const { focusedIndex, maxLineY, minLineY } = state
   if (focusedIndex === 0 || focusedIndex === -1) {
     return state
   }

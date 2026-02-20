@@ -7,7 +7,7 @@ export const focusIndex = <T, State extends List<T>>(
   state: State,
   index: number,
 ): State => {
-  const { itemHeight, minLineY, maxLineY, headerHeight, height, items } = state
+  const { headerHeight, height, itemHeight, items, maxLineY, minLineY } = state
   const itemsLength = items.length
   if (itemsLength === 0) {
     return state
@@ -16,9 +16,9 @@ export const focusIndex = <T, State extends List<T>>(
   if (index === -1) {
     return {
       ...state,
+      focused: true,
       focusedIndex: -1,
       listFocusedIndex: -1,
-      focused: true,
     }
   }
   const listHeight = height - headerHeight
@@ -42,8 +42,8 @@ export const focusIndex = <T, State extends List<T>>(
   }
   return {
     ...state,
+    focused: true,
     focusedIndex: index,
     listFocusedIndex: index,
-    focused: true,
   }
 }

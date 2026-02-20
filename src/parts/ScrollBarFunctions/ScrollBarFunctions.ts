@@ -30,20 +30,20 @@ export const getNewDeltaPercent = (
   if (relativeY <= halfScrollBarHeight) {
     // clicked at top
     return {
-      percent: 0,
       handleOffset: relativeY,
+      percent: 0,
     }
   }
   if (relativeY <= height - halfScrollBarHeight) {
     // clicked in middle
     return {
-      percent: (relativeY - halfScrollBarHeight) / (height - scrollBarHeight),
       handleOffset: halfScrollBarHeight,
+      percent: (relativeY - halfScrollBarHeight) / (height - scrollBarHeight),
     }
   }
   // clicked at bottom
   return {
-    percent: 1,
     handleOffset: scrollBarHeight - height + relativeY,
+    percent: 1,
   }
 }

@@ -12,11 +12,11 @@ export const setDeltaY = <T, State extends List<T>>(
   Assert.object(state)
   Assert.number(value)
   const {
-    itemHeight,
-    finalDeltaY,
     deltaY,
-    height,
+    finalDeltaY,
     headerHeight,
+    height,
+    itemHeight,
     items,
     minimumSliderSize,
   } = state
@@ -50,8 +50,8 @@ export const setDeltaY = <T, State extends List<T>>(
   return {
     ...state,
     deltaY: newDeltaY,
-    minLineY,
     maxLineY,
+    minLineY,
     scrollBarY,
   }
 }

@@ -7,10 +7,10 @@ test('handleWheel - scroll down', () => {
   const state: List<string> = {
     ...createDefaultState(),
     deltaY: 0,
-    itemHeight: 20,
     finalDeltaY: 200,
-    height: 500,
     headerHeight: 40,
+    height: 500,
+    itemHeight: 20,
   }
 
   const result = handleWheel(state, 0, 50)
@@ -22,10 +22,10 @@ test('handleWheel - scroll up', () => {
   const state: List<string> = {
     ...createDefaultState(),
     deltaY: 100,
-    itemHeight: 20,
     finalDeltaY: 200,
-    height: 500,
     headerHeight: 40,
+    height: 500,
+    itemHeight: 20,
   }
 
   const result = handleWheel(state, 0, -50)
@@ -37,10 +37,10 @@ test('handleWheel - clamps at boundaries', () => {
   const state: List<string> = {
     ...createDefaultState(),
     deltaY: 0,
-    itemHeight: 20,
     finalDeltaY: 200,
-    height: 500,
     headerHeight: 40,
+    height: 500,
+    itemHeight: 20,
   }
 
   // Test upper bound
