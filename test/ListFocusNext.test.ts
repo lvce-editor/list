@@ -18,3 +18,26 @@ test('focusNext updates focusedIndex to the next index', () => {
   const result = ListFocusNext.focusNext(initialState)
   expect(result.focusedIndex).toBe(1)
 })
+
+test('focusNext scrolls the last item into view', () => {
+  const items = Array.from({ length: 10 }, (_, index) => `item${index + 1}`)
+  const initialState: List<string> = {
+    ...createDefaultState(),
+    finalDeltaY: 340,
+    focusedIndex: 8,
+    headerHeight: 41,
+    height: 421,
+    itemHeight: 72,
+    items,
+    maxLineY: 10,
+    minLineY: 3,
+    scrollBarHeight: 200,
+  }
+
+  const result = ListFocusNext.focusNext(initialState)
+
+  expect(result.focusedIndex).toBe(9)
+  expect(result.deltaY).toBe(340)
+  expect(result.minLineY).toBe(4)
+  expect(result.maxLineY).toBe(10)
+})
